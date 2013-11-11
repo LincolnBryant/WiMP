@@ -1,8 +1,6 @@
 #!/bin/bash
-# This file should essentially be considered deprecrated right from the start.
-# rc.local seems to be something that is only supported in compatibiltiy mode
-# by Fedora. 
-# -L.B. 10 Nov 2013
+# Checks for wlan0 device and starts batman-adv mesh
+# -L.B. 11 Nov 2013
 
 # load BATMAN module
 modprobe batman-adv
