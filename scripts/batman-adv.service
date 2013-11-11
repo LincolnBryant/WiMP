@@ -1,0 +1,10 @@
+[Unit]
+Description=Wireless mesh networking service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/batman-adv.sh
+
+[Install]
+WantedBy=multi-user.target
