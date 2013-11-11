@@ -1,0 +1,17 @@
+#!/bin/bash
+# This file should essentially be considered deprecrated right from the start.
+# rc.local seems to be something that is only supported in compatibiltiy mode
+# by Fedora. 
+# -L.B. 10 Nov 2013
+
+# load BATMAN module
+modprobe batman-adv
+
+# Set MTU and initial configuration
+ifconfig wlan0 mtu 1520
+iwconfig wlan0 mode ad-hoc essid lbmeshnet ap 02:12:34:56:78:9A channel 1
+
+#configure the interface in BATMAN-adv
+batctl if add wlan0
+ifconfig wlan0 up
+ifconfig bat0 up
