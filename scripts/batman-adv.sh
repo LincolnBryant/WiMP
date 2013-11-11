@@ -2,6 +2,9 @@
 # Checks for wlan0 device and starts batman-adv mesh
 # -L.B. 11 Nov 2013
 
+# set the mesh network name
+MESH_NAME="lbmeshnet"
+
 # load BATMAN module
 modprobe batman-adv
 
@@ -19,7 +22,7 @@ ifconfig wlan0 mtu 1528
 # turn down txpower for bt3
 iwconfig wlan0 txpower 18
 
-iwconfig wlan0 mode ad-hoc essid lbmeshnet ap 02:12:34:56:78:9A channel 1
+iwconfig wlan0 mode ad-hoc essid $MESH_NAME ap 02:12:34:56:78:9A channel 1
 
 #configure the interface in BATMAN-adv
 batctl if add wlan0
