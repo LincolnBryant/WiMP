@@ -6,6 +6,9 @@ This module was specifically built against the following kernel RPM:
 
 You should be able to find the appropriate kernel on Pidora's Koji.
 
+
+( TODO : cleanup this horrible abuse of markdown )
+
 Additionally here are some build instructions:
 
 0) yum groupinstall “Development Tools”
