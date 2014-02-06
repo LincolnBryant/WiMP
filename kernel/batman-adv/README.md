@@ -1,4 +1,4 @@
-Herein is a BATMAN-adv kernel module for kernel for kernel 3.6.11-7 from the 
+Herein is a BATMAN-adv kernel module for kernel for kernel 3.12.0-5 from the 
 Pidora Raspberry Pi repositories.
 
 *This module was specifically built against the following kernel RPM*:
@@ -54,7 +54,7 @@ CONFIG_BATMAN_ADV_BLA=y
 
 9. Build the module:
 ````
-$ make prepare && make net/batman-adv&& make net/batman-adv/batman-adv.ko
+$ make prepare && make net/batman-adv && make net/batman-adv/batman-adv.ko
 ````
 10. Create a directory in the running kernel's module path:
 ````
