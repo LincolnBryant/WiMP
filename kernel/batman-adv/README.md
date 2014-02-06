@@ -1,8 +1,15 @@
 Herein is a BATMAN-adv kernel module for kernel for kernel 3.6.11-7 from the 
 Pidora Raspberry Pi repositories.
 
-This module was specifically built against the following kernel RPM:
-	raspberrypi-kernel-3.6.11-7.20130415git197d15b.rpfr18.armv6hl
+*This module was specifically built against the following kernel RPM*:
+````
+raspberrypi-kernel-3.6.11-7.20130415git197d15b.rpfr18.armv6hl
+````
+
+*Please run the following to determine your kernel version:*
+````
+$ rpm -q raspberrypi-kernel
+````
 
 You should be able to find the appropriate kernel on Pidora's Koji.
 
@@ -33,11 +40,11 @@ $ cd ~/rpmbuild/SPECS; rpmbuild -bp
 ````
 6. Move to the unpacked kernel source directory:
 ````
-$cd ~/rpmbuild/BUILD/raspberrypi-linux-839f349
+$ cd ~/rpmbuild/BUILD/raspberrypi-linux-839f349
 ````
 7. Prepare the old configuration
 ````
- make oldconfig
+$ make oldconfig
 ````
 8.  Edit .config and add the following lines:
 ````
