@@ -32,7 +32,7 @@ $ rpm -ivh raspberrypi-kernel-3.12.0-5.20131106git839f349.rpfr18.src.rpm
 ````
 4. Install the Kernel's dependency packages:
 ````
-$ sudo yum-builddep raspberrypi-kernel-3.6.11-12.20130920git966efc7.rpfr18.src.rpm
+$ sudo yum-builddep raspberrypi-kernel-3.12.0-5.20131106git839f349.rpfr18.src.rpm
 ````
 5. Run a build prepare from rpmbuild to unpack the source tarball to ~/rpmbuild/BUILD: 
 ````
