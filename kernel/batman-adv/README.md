@@ -3,7 +3,7 @@ Pidora Raspberry Pi repositories.
 
 *This module was specifically built against the following kernel RPM*:
 ````
-raspberrypi-kernel-3.6.11-7.20130415git197d15b.rpfr18.armv6hl
+raspberrypi-kernel-3.12.0-5.20131106git839f349.rpfr18.src.rpm
 ````
 
 *Please run the following to determine your kernel version:*
@@ -50,20 +50,22 @@ $ make oldconfig
 ````
 CONFIG_BATMAN_ADV=m
 CONFIG_BATMAN_ADV_BLA=y
+CONFIG_BATMAN_ADV_DAT=y
+CONFIG_BATMAN_ADV_NC=n
+CONFIG_BATMAN_ADV_DEBUG=n
 ````
-
 9. Build the module:
 ````
 $ make prepare && make net/batman-adv && make net/batman-adv/batman-adv.ko
 ````
 10. Create a directory in the running kernel's module path:
 ````
-$ sudo mkdir /lib/modules/3.6.11/kernel/net/batman-adv
+$ sudo mkdir /lib/modules/3.12.0-5.20131106git839f349.rpfr18.bcm2708/kernel/net/batman-adv
 ````
 
 11. Copy the compiled newly module over into the appropriate directory:
 ````
-$ sudo cp net/batman-adv/batman-adv.ko /lib/modules/3.6.11/kernel/net/batman-adv
+$ sudo cp net/batman-adv/batman-adv.ko /lib/modules/3.12.0-5.20131106git839f349.rpfr18.bcm2708/kernel/net/batman-adv
 ````
 
 12. Assume root and refresh the depmod file:
